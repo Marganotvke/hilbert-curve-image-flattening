@@ -1,7 +1,7 @@
 from imageio import imread
 import numpy as np
 import sys
-from hilbert import decode
+from hilbert import decode, encode
 
 def hilbert_flatten(array):
     D = array.ndim
@@ -14,9 +14,11 @@ np.set_printoptions(threshold=sys.maxsize)
 
 im = imread("lolol.jpg")
 gray = im[:,:,0]
-n = 2
-p = 6
-print(hilbert_flatten(gray))
+hilc = hilbert_flatten(gray)
+print(hilc)
+
+
+
 
 
 
